@@ -5,13 +5,13 @@ const NavBar = () => {
 	const [navbarOpen, setNavbarOpen] = React.useState(false);
 	return (
 		<>
-			<nav className="relative py-[48px] mb-3 px-[6%]">
+			<nav className="relative lg:py-12 pt-[32px] pb-[29px] px-[6%] bg-[#F9F9F9]">
 				<div className="w-full flex flex-col lg:flex-row">
 					<div className="w-full relative flex justify-between lg:w-auto lg:static lg:block lg:justify-start">
 						<div className="flex flex-row items-center">
-							<img src="/assets/images/icons/material-symbols_fast-forward-rounded.png" className="h-[24px]" alt="" width={'24px'} />
+							<img src="/assets/images/icons/material-symbols_fast-forward-rounded.png" className="h-6" alt="" width={'24px'} />
 							<a
-								className="font-satoshi text-[24px] text-[500] leading-relaxed inline-block mr-4 py-2"
+								className="font-satoshi lg:text-[24px] text-[16px] font-[500] leading-relaxed inline-block mr-4 py-2"
 								href="#pablo"
 							>
 								FinanceFast
@@ -34,7 +34,7 @@ const NavBar = () => {
 						}
 						id="example-navbar-danger"
 					>
-						<ul className="flex flex-col items-start lg:flex-row list-none lg:ml-auto lg:items-center">
+						<ul className="flex flex-col gap-5 lg:gap-0 items-start lg:flex-row list-none lg:ml-auto lg:items-center">
 							<li className="nav-item mx-[22px]">
 								<a
 									className="flex items-center text-[#3A3A3A] font-satoshi text-[16px] font-[400]"
@@ -60,7 +60,7 @@ const NavBar = () => {
 								</a>
 							</li>
 							<li className="nav-item ml-[22px]">
-								<button className="bg-[#D8C6FF] rounded-[24px] py-[12px] px-[24px] flex flex-row">
+								<button className="bg-[#D8C6FF] rounded-[24px] py-3 px-6 flex flex-row">
 									<img src="/assets/images/icons/device-phone-mobile.png" className="w-[24px] h-[24px]"/>
 									<span className="font-satoshi text-[#000] text-[18px] font-[500]">Download</span>
 								</button>

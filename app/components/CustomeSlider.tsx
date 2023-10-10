@@ -4,7 +4,7 @@ const CustomeSlider = () => {
   return (
     <div className='relative rounded-[24px] boder-[1px] bg-[#ede6fd] border-solid'>
       <p className='text-[#3A3A3A] text-center font-satoshi text-[14px] not-italic font-[500] leading-[24px] lg:text-[24px] lg:leading-[35px] pt-[75px] px-[40px] lg:px-[96px] lg:pt-[88px]'>
-      “I've been using FinanceFast for a few months now and it's completely transformed the way I send money to my family abroad. The platform is so easy to use and transfers are always fast and secure.”
+      “I&apos;ve been using FinanceFast for a few months now and it&apos;s completely transformed the way I send money to my family abroad. The platform is so easy to use and transfers are always fast and secure.”
       </p>
       <div className='flex flex-row justify-center items-center mt-[83px] lg:mt-[93px] px-[85px] py-[25px] lg:px-[320px] lg:py-[32px]'>
         <div className='w-[54px] h-[54px] lg:w-[64px] lg:h-[64px] '>

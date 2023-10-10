@@ -1,12 +1,12 @@
 "use client"
 
-import React, { useEffect, useState } from 'react';
+import React, { useState } from 'react';
 import Image from 'next/image'
 import PhoneInput from 'react-phone-input-2'
 import 'react-phone-input-2/lib/style.css'
-import Slider from './components/Slider';
 import CustomeSlider from './components/CustomeSlider';
 import CurrencySlider from './components/CurrencySlider';
+import VerticalSilder from './components/VerticalSlider';
 
 // import VerticalCarousel from './components/VerticalCarousel';
 
@@ -37,9 +37,6 @@ export default function Home() {
 
   return (
     <div className='bg-[#FFF]'>
-      <Slider />
-      <CustomeSlider />
-      
       <style>{`
             .item {
               height: 10rem;
@@ -49,8 +46,8 @@ export default function Home() {
               font-family: Arial, Helvetica, sans-serif;
              }
           `}</style>
-      <div className='hidden lg:block'>
-        <p className="font-grifter text-[#1A1A1A] text-[48px] font-[700] leading-[54px] w-[928px] text-center mx-auto">
+      <div className='hidden lg:block bg-[#F9F9F9] lg:pt-[106px]'>
+        <p className="font-grifter text-[#1A1A1A] text-[48px] font-[700] leading-[54px] w-[928px] text-center mx-auto not-italic">
           Simplify Your International Transactions with 
           <span className="bg-gradient-to-r from-[#6364FF] from-[64.58%] to-[#563ACC] to-[100%] text-transparent bg-clip-text"> One Platform</span>
         </p>
@@ -91,12 +88,19 @@ export default function Home() {
           `}</style>
         </div>
 
-        <div className='mt-[9.25rem]'>
+        <div className='mt-[148px]'>
           <Image className='mx-auto' src='/assets/images/iPhone.png' width={1400} height={340} alt='' />
         </div>
 
-        <div className='h-[9.6875rem] bg-[#E5DBFB] px-[6%]'>
-          
+        <div className='h-[9.6875rem] bg-[#E5DBFB] flex flex-row py-[43px]'>
+          <div className='pr-[72px] pl-[88px]'>
+            <p className='text-[#3A3A3A] font-satoshi text-[18px] not-italic font-[500] leading-normal w-[339px]'>
+               We&apos;re have been recognized by Leading Finance Publications and Organizations.
+            </p>
+          </div>
+          <div>
+            <Image src="/assets/images/Frame20.png" alt="ccc" width={1000} height={75} />
+          </div>
         </div>
       </div>
       <div className='lg:mt-[112px] mt-[64px] px-[6%]'>
@@ -114,9 +118,20 @@ export default function Home() {
         </div>
       </div>
 
-      <div className='flex flex-col px-[6%] justify-center lg:mt-[7rem] lg:px-[6%] lg:grid lg:grid-cols-11 lg:gap-[33px]'>
+      <div className='flex flex-col px-[6%] justify-center lg:mt-[88px] mt-[54px] lg:px-[6%] lg:grid lg:grid-cols-11 lg:gap-[33px]'>
         <div className='lg:col-span-5'>
-          {/* <VerticalCarousel lists={lists} /> */}
+          <VerticalSilder lists={[
+            "Lack of transparency",
+            "Limited payment methods",
+            "Complex verification processes",
+            "Long payment wait times",
+            "Hidden costs",
+            "Currency exchange rates",
+            "Expensive high fees and unfavorable exchange rates",
+            "Transfer delays and inconvenience",
+            "Fraud and loss of funds",
+            "Traditional in-person transactions",
+          ]}/>
         </div>
 
         <div className='pt-[24px] pb-[24px] flex flex-row justify-between lg:flex-col lg:pt-[0px] lg:pb-[0px]'>
@@ -141,28 +156,28 @@ export default function Home() {
           <p className='text-center font-satoshi text-[10px] not-italic	text-[700] leading-normal uppercase text-[#6364ff] mb-[12px] lg:text-[14px] lg:mb-[16px]'>real-time exchange rate</p>
           <p className='font-grifter text-center text-[#1A1A1A] text-[24px] not-italic text-[700] leading-[28px] lg:text-[40px] lg:leading-[40px]'>Effortlessly Convert</p>
           <p className='font-grifter text-center text-[#1A1A1A] text-[24px] not-italic text-[700] leading-[28px] lg:text-[40px] lg:leading-[40px] mb-[12px]'>Currency</p>
-          <p className='text-[#3A3A3A] text-center font-satoshi text-[14px] not-italic text-[400] leading-[22px] lg:text-[16px] lg:leading-[26px] mb-[54px] lg:mb-[88px]'>Convert your currency from Pounds to Naira or Naira to Dollars. Convert Currency Anytime, <span className='hidden lg:inline-block'> Anywhere with FinanceFast's Seamless and Efficient Service.</span></p>
+          <p className='text-[#3A3A3A] text-center font-satoshi text-[14px] not-italic text-[400] leading-[22px] lg:text-[16px] lg:leading-[26px] mb-[54px] lg:mb-[88px]'>Convert your currency from Pounds to Naira or Naira to Dollars. Convert Currency Anytime, <span className='hidden lg:inline-block'> Anywhere with FinanceFast&apos;s Seamless and Efficient Service.</span></p>
       </div>
 
       <div className='flex flex-col lg:flex-row px-[6%] lg:mb-[148px]'>
-        <div className='rounded-[24px] bg-[#f6e8ff] pt-[32px] lg:pt-[53px] pb-[24.5px] lg:pb-[27px] pl-[16px] pr-[15px] lg:pl-[32px] lg:pr-[127px] lg:w-1/2 w-full'>
+        <div className='rounded-[24px] bg-[#f6e8ff] pt-[32px] lg:pt-[53px] pb-[24.5px] lg:pb-[27px] pl-[16px] pr-[15px] lg:pl-[32px] lg:pr-[32px] lg:w-1/2 w-full'>
             <div className='flex flex-row justify-center items-center'>
               <div className='relative w-[200px] h-[184px] lg:w-[314px] lg:h-[288px] mb-[24px] lg:mb-[40px]'> 
                 <img className='mx-auto w-[100%] h-[100%] z-[31] relative' src='/assets/images/iPhone 13 Pro 1.png'/>
-                <img className='absolute bottom-[0%] w-[80px] h-[39px] left-[-25%] z-[30] lg:w-[141px] lg:h-[69px] lg:left-[-30%]' src='/assets/images/3d-business-pile-of-three-coins 1.png' />
-                <img className='absolute top-[-4%] right-[-15%] w-[80px] h-[61px] z-[32] lg:w-[114px] lg:h-[86px] lg:top-[10%] lg:right-[-20%]' src='/assets/images/business-3d-flying-dollar-1 1.png' />
+                <img className='absolute bottom-[0%] w-[80px] h-[39px] left-[-25%] z-[30] lg:w-[141px] lg:h-[69px] lg:left-[-30%] xl:w-[105px] xl:left-[-18%]' src='/assets/images/3d-business-pile-of-three-coins 1.png' />
+                <img className='absolute top-[-4%] right-[-15%] w-[80px] h-[61px] z-[32] lg:w-[114px] lg:h-[86px] lg:top-[10%] lg:right-[-20%] xl:w-[100px] xl:right-[-13%]' src='/assets/images/business-3d-flying-dollar-1 1.png' />
               </div>
             </div>
             <p className='font-grifter text-[#1A1A1A] text-[20px] not-italic text-[700] leading-normal lg:text-[32px]'>Zero Hidden Fees</p>
             <p className='font-satoshi text-[#3A3A3A] text-[14px] not-italic text-[400] leading-normal lg:text-[16px]'>Get the Best Exchange Rates with FinanceFast: Convert Currency Hassle-Free, Instantly and Without Fees.</p>
         </div>
-        <div className='pt-[24px] flex flex-row justify-between lg:flex-col lg:pt-[0px] lg:ml-[90px] '>
+        <div className='pt-[24px] pb-[24px] flex flex-row justify-between lg:flex-col lg:pt-[0px] lg:ml-[5rem] '>
           <div className="border-t-[1px] mt-[10px] w-[47%] lg:border-l-[1px] lg:h-[43%] lg:border-t-[0px] lg:mt-[0px] lg:ml-[10px]"></div>
           <div className='text-[#3A3A3A] font-satoshi text-[15px] not-italic text-[700] leading-normal uppercase lg:text-[18px]'>VS</div>
           <div className="border-t-[1px] mt-[10px] w-[47%] lg:border-l-[1px] lg:h-[43%] lg:border-t-[0px] lg:mt-[0px] lg:ml-[10px]"></div>
         </div>
-        <div className='mb-[80px] lg:mb-[0px]'>
-          <CurrencySlider active={true} url={'1'} country={'asdf'} content={'asd'}/>
+        <div className='mb-[80px] lg:mb-[0px] lg:ml-[4rem]'>
+          <CurrencySlider active={true} url={'1'} country={'USA'} content={'USA'}/>
         </div>
       </div>
 
@@ -172,7 +187,7 @@ export default function Home() {
       </div>
 
       <div className='px-[6%] mb-[72px] lg:mb-[112px]'>
-        {/* carosel */}
+        <CustomeSlider />
       </div>
         
       <div>
@@ -203,7 +218,7 @@ export default function Home() {
           }
         </button>
         <div className={`panel mb-[24px] lg:mb-[32px] mt-[-12px] lg:mt-[-16px] ${accordNum === 1 ? 'block' : 'hidden'}`}>
-          <p>FinanceFast is a platform that allows you to transfer money to anywhere in the world with confidence and ease. Simply create an account, add your recipient's information, and make a transfer. Our platform handles the rest.</p>
+          <p>FinanceFast is a platform that allows you to transfer money to anywhere in the world with confidence and ease. Simply create an account, add your recipient&apos;s information, and make a transfer. Our platform handles the rest.</p>
         </div>
 
         <button className={`py-[24px] text-[#1A1A1A] text-[16px] not-italic text-[700] leading-normal lg:text-[20px] lg:py-[32px] cursor-pointer flex flex-row justify-between w-full border-t-[1px]`} onClick={() => {
@@ -254,7 +269,7 @@ export default function Home() {
           }
         </button>
         <div className={`panel mb-[24px] lg:mb-[32px] mt-[-12px] lg:mt-[-16px] ${accordNum === 3 ? 'block' : 'hidden'}`}>
-          <p>/////////</p>
+          <p>qweqwe</p>
         </div>
 
         <button className={`py-[24px] text-[#1A1A1A] text-[16px] not-italic text-[700] leading-normal lg:text-[20px] lg:py-[32px] cursor-pointer flex flex-row justify-between w-full hidden lg:flex border-t-[1px]`} onClick={() => {
@@ -279,12 +294,12 @@ export default function Home() {
           }
         </button>
         <div className={`panel mb-[24px] lg:mb-[32px] hidden mt-[-12px] lg:mt-[-16px] ${accordNum === 4 ? 'lg:block' : 'lg:hidden'}`}>
-          <p>FinanceFast is a platform that allows you to transfer money to anywhere in the world with confidence and ease. Simply create an account, add your recipient's information, and make a transfer. Our platform handles the rest.</p>
+          <p>FinanceFast is a platform that allows you to transfer money to anywhere in the world with confidence and ease. Simply create an account, add your recipient&apos;s information, and make a transfer. Our platform handles the rest.</p>
         </div>
       </div>
 
       <div className='px-[6%]' >
-          <div className="bg-[url('/assets/images/Frame26.png')] lg:bg-[url('/assets/images/CTA3-web.png')] bg-cover bg-no-repeat bg-fixed flex flex-col  justify-center lg:flex-row px-[16px] lg:px-[54px] rounded-[24px]" >
+          <div className="bg-[url('/assets/images/Frame26.png')] lg:bg-[url('/assets/images/CTA3-web.png')] bg-cover bg-no-repeat bg-fixed flex flex-col  justify-center lg:flex-row px-[16px] lg:px-[54px] rounded-[24px] mb-[72px] lg:mt-[100px]" >
             <div className='pt-[54px] lg:pt-[121px] lg:w-1/2 '>
               <p className='font-grifter text-center lg:text-start font-grifter text-[#FFF] text-[24px] not-italic text-[700] leading-[34px] lg:text-[40px] lg:leading-[46px] mb-[12px] lg:mb-[24px]'>One Solution for All Your Cross-Border Payments</p>
               <div className='flex flex-row justify-center lg:justify-start pb-[56px] lg:pb-[120px]'>
